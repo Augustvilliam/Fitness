@@ -12,6 +12,8 @@
     --m-1:1rem;
     --border-radious:.6rem;
     --border-color:#a8a8a8;
+    --border-style: 1px solid var(--border-color);
+    --clr-nav-bg: rgba(0, 17, 255, 0.705);
     
 
     --font-xs--:8px;
@@ -50,6 +52,10 @@ a{
     color: var(--clr--tex1);
     text-decoration:none;
 }
+a:hover{
+    color: var(--clr--tex1);
+    text-decoration:underline;
+}
 
 
 /*Container/wrappers */ 
@@ -57,7 +63,7 @@ a{
     margin:0 auto;
     margin-top:2rem;
     width: 1320px;
-    border:1px solid var(--border-color);
+    border:var(--border-style);
     border-top:none;
     border-bottom: none;
     padding:1rem;
@@ -69,7 +75,7 @@ a{
     grid-template-rows: auto auto;
     align-items: center;
     justify-content: center;
-    border-bottom:1px solid var(--border-color);
+    border-bottom:var(--border-style);
     width: 100%;
     padding:2rem;
     .header-content{
@@ -102,7 +108,7 @@ a{
     display:flex;
     flex-direction: row;
     gap:2rem;
-    border-left:1px solid var(--border-color);
+    border-left:var(--border-style);
     padding-left:1rem;
 }
 .side-container{
@@ -141,7 +147,7 @@ a{
     list-style: none;
 }
 .nav-group{
-    border:1px solid var(--border-color);
+    border:var(--border-style);
     border-radius: 0 1rem 1rem 0;
 }
 
@@ -166,10 +172,38 @@ a{
 .nav-link{
     padding: 1rem 2rem;
     margin:1rem 1rem 1rem 0rem;
-    border:1px solid var(--border-color);
+    border:var(--border-style);
     border-radius: 0 1rem 1rem 0;
     border-left:none;
 }
+.nav-link:hover{
+    transition: .5s;
+    background-color: var(--clr-nav-bg);
+}
 .btn-service{
     font-size: var(--font-xxl--)
+}
+
+
+/* Components*/
+.news-card{
+    display: flex;
+    flex-direction: column;
+    margin:1rem;
+    border:1px solid var(--border-color);
+    border-radius: var(--border-radious);
+    padding:1rem;
+    gap: 1rem;
+}
+.news-acordion{
+    margin-top:1rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    border-top:var(--border-style);
+    padding-top:1rem;
+}
+.news-text{
+    height: 16px;
+    overflow: hidden;
 }
